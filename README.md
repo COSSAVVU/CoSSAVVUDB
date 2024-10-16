@@ -1,7 +1,7 @@
 # CoSSAVVUDB
 ### A database for CoSSA VVU
 
-Proposed tables
+_Proposed tables_
 A comprehensive structure for Our CoSSA database, covering members, events, roles, committees, announcements, sponsorships, feedback, resources, and meetings... 
 Each table is designed to store specific information, ensuring data integrity and ease of access.
 
@@ -163,3 +163,5 @@ Meetings are connected to:
 |MeetingID: INT (Foreign key referencing Meetings)|
 |MemberID: INT (Foreign key referencing Members)|
 |AttendanceStatus: ENUM('Present', 'Absent', 'Excused')|
+
+You are Free To Make a Pull Request.

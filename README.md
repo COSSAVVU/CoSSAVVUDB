@@ -5,7 +5,10 @@ _Proposed tables_
 A comprehensive structure for Our CoSSA database, covering members, events, roles, committees, announcements, sponsorships, feedback, resources, and meetings... 
 Each table is designed to store specific information, ensuring data integrity and ease of access.
 
----
+Diagram Link 🔗: https://lucid.app/lucidchart/cdc4875c-d0c9-413c-b2e3-544e800b6e3a/edit?viewport_loc=-1819%2C-3020%2C5068%2C2749%2C0_0&invitationId=inv_5be5f9d3-3925-450f-b611-8d1554d9ceb9
+
+---![CoSSAVVUDB](https://github.com/user-attachments/assets/30b4cb4d-f2d8-49be-90f3-d009162ac010)
+
 |Members|  | 
 |--:|:--|
 |MemberID | INT AUTO_INCREMENT PK|

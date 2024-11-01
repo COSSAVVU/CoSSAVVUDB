@@ -19,7 +19,7 @@ Diagram Link 🔗: https://lucid.app/lucidchart/cdc4875c-d0c9-413c-b2e3-544e800b
 
 ---![CoSSAVVUDB](https://github.com/user-attachments/assets/30b4cb4d-f2d8-49be-90f3-d009162ac010)
 
-|Members|  | 
+|Members| Data Type/ Relation | 
 |--:|:--|
 |MemberID | INT AUTO_INCREMENT PK|
 |Name| VARCHAR(100)|
@@ -43,14 +43,14 @@ Members are connected to:
 - Meetings through OrganizerID (one-to-many relationship)
 
 ---
-|Events|
-|:--|
-|EventID: INT AUTO_INCREMENT PRIMARY KEY|
-|EventName: VARCHAR(100)|
-|EventDate: DATE|
-|Location: VARCHAR(100)|
-|Description: TEXT|
-|OrganizerID: INT (Foreign key referencing Members)|
+|Events| Data Type/ Relation |
+|:--|:--|
+|EventID | INT AUTO_INCREMENT PRIMARY KEY|
+|EventName | VARCHAR(100)|
+|EventDate | DATE|
+|Location | VARCHAR(100)|
+|Description | TEXT|
+|OrganizerID | INT (Foreign key referencing Members)|
 
 ### Relationships:
 Events are connected to:
@@ -59,122 +59,135 @@ Events are connected to:
 - EventSponsors through EventID (one-to-many relationship)
 
 ---
-|Registrations|
-|:--|
-|RegistrationID: INT AUTO_INCREMENT PRIMARY KEY|
-|MemberID: INT (Foreign key referencing Members)|
-|EventID: INT (Foreign key referencing Events)|
-|RegistrationDate: DATE|
+|Registrations| Data Type/ Relation |
+|:--|:--|
+|RegistrationID | INT AUTO_INCREMENT PRIMARY KEY|
+|MemberID | INT (Foreign key referencing Members)|
+|EventID | INT (Foreign key referencing Events)|
+|RegistrationDate | DATE|
 
 
 ---
-|Roles|
-|:--|
-|RoleID: INT AUTO_INCREMENT PRIMARY KEY|
-|RoleName: VARCHAR(50)|
+|Roles| Data Type/ Relation |
+|:--|:--|
+|RoleID | INT AUTO_INCREMENT PRIMARY KEY|
+|RoleName | VARCHAR(50)|
 
 ### Relationship:
 Roles are connected to:
 - MemberRoles through RoleID (one-to-many relationship)
 
 ---
-|MemberRoles|
-|:--|
-|MemberRoleID: INT AUTO_INCREMENT PRIMARY KEY|
-|MemberID: INT (Foreign key referencing Members)|
-|RoleID: INT (Foreign key referencing Roles)|
-|StartDate: DATE|
-|EndDate: DATE|
+|MemberRoles| Data Type/ Relation |
+|:--|:--|
+|MemberRoleID | INT AUTO_INCREMENT PRIMARY KEY|
+|MemberID | INT (Foreign key referencing Members)|
+|RoleID | INT (Foreign key referencing Roles)|
+|StartDate | DATE|
+|EndDate | DATE|
 
 ---
-|Committees|
-|:--|
-|CommitteeID: INT AUTO_INCREMENT PRIMARY KEY|
-|CommitteeName: VARCHAR(100)|
-|Description: TEXT|
+|Committees| Data Type/ Relation |
+|:--|:--|
+|CommitteeID | INT AUTO_INCREMENT PRIMARY KEY|
+|CommitteeName | VARCHAR(100)|
+|Description | TEXT|
 
 ### Relationship:
 Committees are connected to:
 - MemberCommittees through CommitteeID (one-to-many relationship)
 
 ---
-|MemberCommittees|
-|:--|
-|MemberCommitteeID: INT AUTO_INCREMENT PRIMARY KEY|
-|MemberID: INT (Foreign key referencing Members)|
-|CommitteeID: INT (Foreign key referencing Committees)|
-|JoinDate: DATE|
-|LeaveDate: DATE|
+|MemberCommittees| Data Type/ Relation |
+|:--|:--|
+|MemberCommitteeID | INT AUTO_INCREMENT PRIMARY KEY|
+|MemberID | INT (Foreign key referencing Members)|
+|CommitteeID | INT (Foreign key referencing Committees)|
+|JoinDate | DATE|
+|LeaveDate | DATE|
 
 ---
-|Announcements|
-|:--|
-|AnnouncementID: INT AUTO_INCREMENT PRIMARY KEY|
-|Title: VARCHAR(100)|
-|Content: TEXT|
-|PostedByID: INT (Foreign key referencing Members)|
-|PostedDate: DATE|
+|Announcements| Data Type/ Relation |
+|:--|:--|
+|AnnouncementID | INT AUTO_INCREMENT PRIMARY KEY|
+|Title | VARCHAR(100)|
+|Content | TEXT|
+|PostedByID | INT (Foreign key referencing Members)|
+|PostedDate | DATE|
 
 ---
-|Sponsors|
-|:--|
-|SponsorID: INT AUTO_INCREMENT PRIMARY KEY|
-|SponsorName: VARCHAR(100)|
-|ContactInfo: VARCHAR(150)|
-|SponsorshipAmount: DECIMAL(10, 2)|
+|Sponsors| Data Type/ Relation |
+|:--|:--|
+|SponsorID | INT AUTO_INCREMENT PRIMARY KEY|
+|SponsorName | VARCHAR(100)|
+|ContactInfo | VARCHAR(150)|
+|SponsorshipAmount | DECIMAL(10, 2)|
 
 ### Relationship:
 Sponsors are connected to:
 - EventSponsors through SponsorID (one-to-many relationship)
 
 ---
-|EventSponsors|
-|:--|
-|EventSponsorID: INT AUTO_INCREMENT PRIMARY KEY|
-|EventID: INT (Foreign key referencing Events)|
-|SponsorID: INT (Foreign key referencing Sponsors)|
-|SponsorshipAmount: DECIMAL(10, 2)|
+|EventSponsors| Data Type/ Relation |
+|:--|:--|
+|EventSponsorID | INT AUTO_INCREMENT PRIMARY KEY|
+|EventID | INT (Foreign key referencing Events)|
+|SponsorID | INT (Foreign key referencing Sponsors)|
+|SponsorshipAmount | DECIMAL(10, 2)|
 
 ---
-|Feedback|
-|:--|
-|FeedbackID: INT AUTO_INCREMENT PRIMARY KEY|
-|MemberID: INT (Foreign key referencing Members)|
-|EventID: INT (Foreign key referencing Events)|
-|Rating: INT (1 to 5)|
-|Comments: TEXT|
-|FeedbackDate: DATE|
+|Feedback| Data Type/ Relation |
+|:--|:--|
+|FeedbackID | INT AUTO_INCREMENT PRIMARY KEY|
+|MemberID | INT (Foreign key referencing Members)|
+|EventID | INT (Foreign key referencing Events)|
+|Rating | INT (1 to 5)|
+|Comments | TEXT|
+|FeedbackDate | DATE|
 
 ---
-|Resources|
-|:--|
-|ResourceID: INT AUTO_INCREMENT PRIMARY KEY|
-|ResourceName: VARCHAR(100)|
-|ResourceType: VARCHAR(50)|
-|URL: VARCHAR(200)|
-|UploadedByID: INT (Foreign key referencing Members)|
-|UploadDate: DATE|
+|Resources| Data Type/ Relation |
+|:--|:--|
+|ResourceID | INT AUTO_INCREMENT PRIMARY KEY|
+|ResourceName | VARCHAR(100)|
+|ResourceType | VARCHAR(50)|
+|URL | VARCHAR(200)|
+|UploadedByID | INT (Foreign key referencing Members)|
+|UploadDate | DATE|
 
 ---
-|Meetings|
-|:--|
-|MeetingID: INT AUTO_INCREMENT PRIMARY KEY|
-|MeetingName: VARCHAR(100)|
-|MeetingDate: DATE|
-|Location: VARCHAR(100)|
-|Notes: TEXT|
-|OrganizerID: INT (Foreign key referencing Members)|
+|Meetings| Data Type/ Relation |
+|:--|:--|
+|MeetingID | INT AUTO_INCREMENT PRIMARY KEY|
+|MeetingName | VARCHAR(100)|
+|MeetingDate | DATE|
+|Location | VARCHAR(100)|
+|Notes | TEXT|
+|OrganizerID | INT (Foreign key referencing Members)|
 
 ### Relationship:
 Meetings are connected to:
 -Attendance through MeetingID (one-to-many relationship)
 
 ---
-|Attendance|
-|:--|
-|AttendanceID: INT AUTO_INCREMENT PRIMARY KEY|
-|MeetingID: INT (Foreign key referencing Meetings)|
-|MemberID: INT (Foreign key referencing Members)|
-|AttendanceStatus: ENUM('Present', 'Absent', 'Excused')|
+|Attendance| Data Type/ Relation |
+|:--|:--|
+|AttendanceID | INT AUTO_INCREMENT PRIMARY KEY|
+|MeetingID | INT (Foreign key referencing Meetings)|
+|MemberID | INT (Foreign key referencing Members)|
+|AttendanceStatus | ENUM('Present', 'Absent', 'Excused')|
+
+---
+| Membership Dues | Data Type/ Relation |
+|:--|:--|
+| PaymentID | INT AUTO_INCREMENT PRIMARY KEY|
+| MemberID | INT ( Foreign Key referencing Members)|
+| Amount | DECIMAL(10, 2)|
+| PaymentDate | DATE|
+| PaymentMethod | ENUM('Cash', 'Card', 'Online Transfer') |
+| Status | ENUM('Paid', 'Pending')|
+| Note | TEXT |
+
+
 
 You are Free To Make a Pull Request.

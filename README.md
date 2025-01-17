@@ -184,7 +184,7 @@ Meetings are connected to:
 | MemberID | INT ( Foreign Key referencing Members)|
 | Amount | DECIMAL(10, 2)|
 | PaymentDate | DATE|
-| PaymentMethod | ENUM('Cash', 'Card', 'Online Transfer') |
+| PaymentMethod | ENUM('Cash', 'Mobile Money') |
 | Status | ENUM('Paid', 'Pending')|
 | Note | TEXT |
 

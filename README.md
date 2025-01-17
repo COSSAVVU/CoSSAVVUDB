@@ -2,7 +2,7 @@
 ### A database for CoSSA VVU
 
 _Proposed tables_
-A comprehensive structure for Our CoSSA database, covering members, events, roles, committees, announcements, sponsorships, feedback, resources, and meetings... 
+A comprehensive structure for Our CoSSA database, covering members, events, roles, committees, announcements, sponsorships, feedback, resources, CoSSA Dues, and meetings... 
 Each table is designed to store specific information, ensuring data integrity and ease of access.
 
 A CoSSA database can be incredibly beneficial. Here’s why:

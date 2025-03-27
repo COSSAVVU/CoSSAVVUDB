@@ -1,11 +1,14 @@
 CREATE TABLE Members (
     MemberID SERIAL PRIMARY KEY,
-    Name VARCHAR(100),
     StudentID VARCHAR(20) UNIQUE,
-    Email VARCHAR(100),
+    LastName VARCHAR(50),
+    FirstName VARCHAR(50),
+    OtherName VARCHAR(50),
+    PersonalEmail VARCHAR(100),
+    StudentEmail VARCHAR(100),
     PhoneNumber VARCHAR(15),
-    JoinDate DATE,
-    Major VARCHAR(50),
+    AcademicYearJoined VARCHAR(10),
+    Dept VARCHAR(50),
     GraduationYear INT
 );
 
